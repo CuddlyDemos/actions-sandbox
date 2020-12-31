@@ -1,0 +1,12 @@
+---
+name: ci
+on: [pull_request]
+
+jobs:
+  yell:
+    name: yell
+    runs-on: ubuntu-latest
+    steps:
+      - name: List files changed
+        run: |
+          git --no-pager diff --name-only HEAD HEAD~1
