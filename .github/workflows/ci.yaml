@@ -7,6 +7,9 @@ jobs:
     name: yell
     runs-on: ubuntu-latest
     steps:
+      - name: Check out the codebase.
+        uses: actions/checkout@v2
+
       - name: List files changed
         run: |
           git --no-pager diff --name-only HEAD HEAD~1
