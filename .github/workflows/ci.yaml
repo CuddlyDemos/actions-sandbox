@@ -13,4 +13,5 @@ jobs:
       - name: List files changed
         run: |
           ls
-          git --no-pager diff --name-only HEAD HEAD~1
+          git status
+          git log
